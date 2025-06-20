@@ -1,8 +1,5 @@
 # Winsol-SP-Home
 Sharepoint Home for Cliënt
-
-# Winsol SharePoint Home
-
 Een custom ontworpen homepage voor het Winsol SharePoint intranet.
 
 ## Inhoud
