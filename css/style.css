@@ -67,11 +67,137 @@ main {
   gap: 5rem;
 }
 
-.products {
-  display: grid;
-  grid-template-columns: 4fr 3fr 1.5fr 3fr 3fr;
-  grid-template-rows: 0.75fr 0.5fr 0.25fr 0.5fr;
-  /* gap: 2rem; */
+@media (min-width: 660) and (max-width: 1400px) {
+  .products {
+    display: grid;
+    grid-template-columns: 4fr 3fr 1.5fr 3fr 3fr;
+    grid-template-rows: 0.75fr 0.5fr 0.25fr 0.5fr;
+  }
+  .product-item-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  margin-right: var(--gap);
+  margin-bottom: var(--gap);
+  background-image: url('/images/jouw-afbeelding.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .product-item-2 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+    margin-right: var(--gap);
+    margin-bottom: var(--gap);
+  }
+
+  .product-item-3 {
+    grid-column: 5;
+    grid-row: 1 / span 2;
+    margin-right: var(--gap);
+    margin-bottom: var(--gap);
+  }
+
+  .product-item-4 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    margin-right: var(--gap);
+    margin-bottom: var(--gap);
+  }
+
+  .product-item-5 {
+    grid-column: 1;
+    grid-row: 4;
+    margin-right: var(--gap);
+  }
+
+  .product-item-6_block-1 {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+    border-radius: 0% var(--border-radius) var(--border-radius) var(--border-radius);
+    margin-right: var(--gap);
+  }
+
+  .product-item-6_block-2 {
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: var(--border-radius) var(--border-radius) 0% 0%;
+    margin-right: var(--gap);
+  }
+
+  .product-item-7 {
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 2;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .products {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 2fr 1fr repeat(2, 2fr) 3fr;
+  }
+
+  .product-item-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .product-item-2 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .product-item-3 {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+  }
+
+  .product-item-4 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .product-item-5 {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+
+  .product-item-6 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .product-item-7 {
+    grid-column: 2;
+    grid-row: 5;
+  }
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  /* background-color: var(--winsol-yellow); */
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: lightgrey;
+    flex-wrap: wrap; /* <--- optioneel, alleen als je wil dat items wrappen */
+  overflow: hidden; /* <--- dit voorkomt overlopen */
+}
+
+.product-item-title {
+  font-size: 2rem;
+}
+
+.product-item-1,
+.product-item-2,
+.product-item-3,
+.product-item-4,
+.product-item-5,
+.product-item-6_block-1 {
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons {
@@ -104,90 +230,6 @@ main {
   color: var(--glorious-grey);
   text-decoration: none;
   font-size: 1.2rem;
-}
-
-.product-item {
-  display: flex;
-  flex-direction: column;
-  /* background-color: var(--winsol-yellow); */
-  padding: 1rem 1.5rem;
-  border: none;
-  border-radius: var(--border-radius);
-  background-color: lightgrey;
-    flex-wrap: wrap; /* <--- optioneel, alleen als je wil dat items wrappen */
-  overflow: hidden; /* <--- dit voorkomt overlopen */
-}
-
-.product-item-1,
-.product-item-2,
-.product-item-3,
-.product-item-4,
-.product-item-5,
-.product-item-6_block-1 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.product-item-1 {
-  grid-column: 1 / span 2;
-  grid-row: 1;
-  margin-right: var(--gap);
-  margin-bottom: var(--gap);
-  background-image: url('/images/jouw-afbeelding.jpg');
-  /* background-size: cover;       zorgt dat de afbeelding mooi vult */
-  background-position: center;  /* houdt het gecentreerd */
-  background-repeat: no-repeat; /* geen herhaling van de afbeelding */
-}
-
-.product-item-2 {
-  grid-column: 3 / span 2;
-  grid-row: 1 / span 2;
-  margin-right: var(--gap);
-  margin-bottom: var(--gap);
-}
-
-.product-item-3 {
-  grid-column: 5;
-  grid-row: 1 / span 2;
-  margin-right: var(--gap);
-  margin-bottom: var(--gap);
-}
-
-.product-item-4 {
-  grid-column: 1;
-  grid-row: 2 / span 2;
-  margin-right: var(--gap);
-  margin-bottom: var(--gap);
-}
-
-.product-item-5 {
-  grid-column: 1;
-  grid-row: 4;
-  margin-right: var(--gap);
-}
-
-.product-item-6_block-1 {
-  grid-column: 2 / span 2;
-  grid-row: 3 / span 2;
-  border-radius: 0% var(--border-radius) var(--border-radius) var(--border-radius);
-  margin-right: var(--gap);
-}
-
-.product-item-6_block-2 {
-  grid-column: 2;
-  grid-row: 2;
-  border-radius: var(--border-radius) var(--border-radius) 0% 0%;
-  margin-right: var(--gap);
-}
-
-.product-item-7 {
-  grid-column: 4 / span 2;
-  grid-row: 3 / span 2;
-  margin-right: 2rem;
-}
-
-.product-item-title {
-  font-size: 2rem;
 }
 
 .aside-items {
