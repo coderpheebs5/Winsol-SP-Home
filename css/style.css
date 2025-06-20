@@ -245,7 +245,7 @@ main {
 @media (min-width: 660px) and (max-width: 1680px) {
   .aside-items {
     display: grid;
-    grid-template-columns: 3fr 4.5fr 2.5fr 2fr;
+    grid-template-columns: 3fr 4.5fr 2.5fr;
     width: 100%;
     margin-bottom: 5rem;
   }
@@ -264,7 +264,7 @@ main {
   .aside-items {
     display: flex;
     flex-direction: column;
-    grid-template-columns: 3fr 4.5fr 2.5fr 2fr;
+    grid-template-columns: 3fr 4.5fr 2.5fr;
     width: 100%;
     margin-bottom: 5rem;
   }
@@ -297,9 +297,9 @@ main {
     background-color: lightblue;
   }
 
-  .aside-item-4 {
+  /* .aside-item-4 {
     background-color: lightyellow;
-  }
+  } */
 
   .aside-buttons {
     display: flex;
