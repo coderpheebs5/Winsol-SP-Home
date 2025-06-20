@@ -95,13 +95,6 @@ main {
   background-repeat: no-repeat;
   }
 
-  .product-item-3 {
-    grid-column: 3 / span 2;
-    grid-row: 1 / span 2;
-    margin-right: var(--gap);
-    margin-bottom: var(--gap);
-  }
-
   .product-item-2 {
     grid-column: 5;
     grid-row: 1 / span 2;
@@ -109,6 +102,18 @@ main {
     margin-bottom: var(--gap);
   }
 
+  .product-item-3 {
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 2;
+    margin-right: 2rem;
+  }
+
+  .product-item-4 {
+    grid-column: 1;
+    grid-row: 4;
+    margin-right: var(--gap);
+  }
+  
   .product-item-5 {
     grid-column: 1;
     grid-row: 2 / span 2;
@@ -116,10 +121,8 @@ main {
     margin-bottom: var(--gap);
   }
 
-  .product-item-4 {
-    grid-column: 1;
-    grid-row: 4;
-    margin-right: var(--gap);
+  .product-item-6 {
+    display: contents;
   }
 
   .product-item-6_block-1 {
@@ -136,10 +139,11 @@ main {
     margin-right: var(--gap);
   }
 
-  .product-item-7 {
-    grid-column: 4 / span 2;
-    grid-row: 3 / span 2;
-    margin-right: 2rem;
+    .product-item-7 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+    margin-right: var(--gap);
+    margin-bottom: var(--gap);
   }
 }
 /* MOBILE */
@@ -147,7 +151,7 @@ main {
   .products {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 2fr 1fr repeat(2, 2fr) 3fr;
+    grid-template-rows: 2fr 1fr repeat(2, 2fr) 3.5fr;
     gap: 3rem;
   }
 
@@ -176,10 +180,20 @@ main {
     grid-row: 4;
   }
 
-  .product-item-6_block-1,
-  .product-item-6_block-2 {
+  .product-item-6 {
     grid-column: 1;
     grid-row: 5;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 5;
+}
+
+  .product-item-6_block-1,
+  .product-item-6_block-2 {
+    /* Haal grid-specific styling hier weg als die conflict maakt */
+    all: unset; /* Reset alles als het botst met desktop */
+    flex: 1;
   }
 
   .product-item-7 {
